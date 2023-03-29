@@ -37,3 +37,8 @@ h1 {
     text-align: center;
     color: rgba(134, 134, 134, 0.541);
 }
+
+.title {
+    font-weight: 75;
+    color: rgb(250, 100, 0);
+}
