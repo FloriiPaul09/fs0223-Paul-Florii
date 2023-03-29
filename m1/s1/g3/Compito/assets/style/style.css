@@ -1,0 +1,25 @@
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.img {
+    display: flex;
+    justify-content: center;
+    height: 75px;
+    padding: 10px;
+}
+
+.slogan {
+    display: flex;
+    justify-content: center;
+    color: rgb(0, 107, 93);
+    background-color: rgb(250, 246, 215);
+}
+
+#thickk {
+    font-weight: bolder;
+}
+
+.content {
+    margin: 25px 35% 5px;
+}
