@@ -14,6 +14,7 @@ body {
     justify-content: center;
     color: rgb(0, 107, 93);
     background-color: rgb(250, 246, 215);
+    border-top: 1px solid orange;
 }
 
 #thickk {
@@ -36,6 +37,11 @@ h1 {
 .description {
     text-align: center;
     color: rgba(134, 134, 134, 0.541);
+}
+
+.link {
+    border-left: 1px solid orange;
+    line-height: 25%;
 }
 
 .title {
