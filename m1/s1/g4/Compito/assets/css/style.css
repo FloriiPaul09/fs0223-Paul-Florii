@@ -8,6 +8,7 @@ header {
     background: rgb(0, 126, 179);
     background: linear-gradient(180deg, rgba(0, 126, 179, 1) 11%, rgba(0, 83, 135, 1) 100%);
     color: white;
+    line-height: 1.5em;
 }
 
 .img {
