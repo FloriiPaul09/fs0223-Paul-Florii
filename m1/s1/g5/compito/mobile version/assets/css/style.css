@@ -92,7 +92,8 @@ button {
     padding-left: 30px;
     padding-right: 30px;
     margin-bottom: 2rem;
-    border: #dee1e3;
+    border-style: solid;
+    border-color: #dee1e3;
 }
 
 .posts {
