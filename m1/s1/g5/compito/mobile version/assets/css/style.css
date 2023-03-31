@@ -12,11 +12,10 @@ h4,
 h5,
 h6 {
     font-family: 'Montserrat', sans-serif;
-    margin-bottom: 1rem;
-    margin-top: 2.0rem;
 }
 
-h1,
+
+/* /* h1,
 h2,
 h3,
 h4,
@@ -29,20 +28,22 @@ a {
     padding-left: 15px;
     padding-right: 15px;
     margin-top: 1.5rem;
-    margin-bottom: 1.5rem;
-}
+    margin-bottom: 1.5rem; */
 
 body {
-    display: block;
     color: #393d41;
     font-family: 'Open Sans', sans-serif;
+    line-height: 1.65rem;
     font-size: 1.2rem;
     text-align: center;
     align-items: center;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .radial {
     border-radius: 50%;
+    width: 75%;
 }
 
 header {
@@ -70,7 +71,13 @@ button {
     border-radius: 5px;
 }
 
+.caption {
+    margin-bottom: 2rem;
+}
+
 .guarantees {
+    margin-top: 4rem;
+    margin-bottom: 4rem;
     color: white;
     background-color: #f04c2f;
     padding: 30px;
@@ -79,4 +86,22 @@ button {
 .special {
     color: white;
     font-size: 2rem;
+}
+
+.article {
+    margin-bottom: 2rem;
+    border-color: 50px #dee1e3;
+}
+
+.posts {
+    width: 80%;
+}
+
+footer {
+    background-color: rgb(0, 132, 165);
+    color: white;
+}
+
+footer a:link {
+    color: white;
 }
