@@ -89,6 +89,7 @@ button {
 }
 
 .article {
+    box-shadow: 5px 5px 5px #dee1e3;
     padding-left: 30px;
     padding-right: 30px;
     margin-bottom: 2rem;
