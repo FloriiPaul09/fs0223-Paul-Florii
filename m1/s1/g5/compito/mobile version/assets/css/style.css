@@ -38,7 +38,9 @@ header {
     background-image: url(../images/banner.jpg);
     background-size: contain;
     background-size: cover;
-    padding-top: 20px;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 2rem;
     padding-bottom: 3rem;
     margin-bottom: 2rem;
 }
@@ -63,6 +65,8 @@ button {
 
 .caption {
     margin-bottom: 2rem;
+    padding-left: 30px;
+    padding-right: 30px;
 }
 
 .guarantees {
@@ -71,6 +75,8 @@ button {
     color: white;
     background-color: #f04c2f;
     padding: 30px;
+    padding-left: 30px;
+    padding-right: 30px;
 }
 
 .special {
@@ -79,15 +85,19 @@ button {
 }
 
 .article {
+    padding-left: 30px;
+    padding-right: 30px;
     margin-bottom: 2rem;
-    border-color: 50px #dee1e3;
+    outline-color: #dee1e3;
 }
 
 .posts {
-    width: 80%;
+    width: 100%;
 }
 
 footer {
+    padding-left: 30px;
+    padding-right: 30px;
     padding-top: 3rem;
     background-color: rgb(0, 132, 165);
     color: white;
