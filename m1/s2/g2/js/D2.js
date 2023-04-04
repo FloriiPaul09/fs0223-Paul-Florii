@@ -11,10 +11,22 @@ REGOLE
  Elenca e descrivi i principali datatype in JavaScript. Prova a spiegarli come se volessi farli comprendere a un bambino.
 */
 
-/*I data type su javascript sono:
-"String" indica qualsiasi cosa detro gli apostrofi oppure dentro alle virgolette,
-"number" esempio 9,
-"boolean" detto anche acceso o spento, esempio vero o falso*/
+/*-Dato 'Stringa' indica sia il singolo carattere che la sequenza finita di caratteri. Possono essere modificate e manipolate tramite metodi.
+Si dichiarano scrivendoli in mezzo agli apostrofi 'così', o alle  virgolette "così".
+
+-Dato Numerico, indica un numero. In JS non c'è distinzione fra intero e decimale, che viene scritto con il punto e non con la virgola. 
+I dati numerici non richiedono '' o "".
+
+-Dato booleano, indica un booleano ossia due soli valori, true o false. Serve a definire se un controllo risulta vero o falso.
+
+-Null è una parola chiave che indica l'assenza intenzionale di un oggetto ossia nessun valore ed è diverso da zero. 
+Se rimandato da una logica booleana indica false.
+
+-Undefined indica che una variabile non è stata definita o non ha un valore assegnato.
+
+-Object un contenitore di proprietà (dati) e di metodi (funzionalità), che servono a formare una struttura logica.
+
+-Array è una variabile che contiene più dati al suo interno dello stesso valore.*/
 
 
 /* ESERCIZIO 2
