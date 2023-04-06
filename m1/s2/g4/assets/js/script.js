@@ -194,7 +194,7 @@ console.log(eyeColor);
     */
 
 
-    switch (mass) {
+    switch (true) {
         case mass < 500:
             console.log("Ship is under loaded");
             break;
