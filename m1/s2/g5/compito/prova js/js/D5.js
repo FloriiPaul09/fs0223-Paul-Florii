@@ -110,11 +110,6 @@ REGOLE
     const numericArray = [
         6, 90, 45, 75, 84, 98, 35, 74, 31, 2, 8, 23, 100, 32, 66, 313, 321, 105,
     ]
-    while (numericArray.length > 0) {
-
-        console.log(numericArray.pop());
-    }
-    console.log(numericArray);
 
 
 }
@@ -144,12 +139,8 @@ REGOLE
             case "d":
                 newCharactersArray.push(1);
                 break;
+
         }
-
-
     }
     console.log(newCharactersArray);
-
-
-
 }
