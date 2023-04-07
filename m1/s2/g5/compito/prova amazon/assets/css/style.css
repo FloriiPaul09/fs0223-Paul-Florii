@@ -1,3 +1,86 @@
+body {
+    background-color: #f1f1f1;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
 header {
     background-color: #222f3e;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    padding-left: 2rem;
+}
+
+header img {
+    width: 9%;
+}
+
+nav {
+    background-color: #3a495a;
+    color: #fff;
+}
+
+nav table tr td {
+    padding-left: 1.5rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    font-size: 0.9rem;
+}
+
+main {
+    margin-left: 2rem;
+    margin-right: 2rem;
+}
+
+.high-light {
+    background-color: rgb(255, 81, 0);
+    color: #fff;
+    text-align: center;
+    margin-top: 2rem;
+    padding: 0.5rem;
+    font-size: 00.9rem;
+}
+
+.gift {
+    background-image: url(../immages/bg-image.png);
+    padding-top: 4rem;
+    padding-bottom: 2rem;
+    color: #fff;
+    text-align: center;
+    font-weight: bold;
+    line-height: 3rem;
+    margin-top: 2rem;
+}
+
+.gift h2 {
+    font-size: 2rem;
+}
+
+.find {
+    background-color: #fff;
+    margin-top: 2rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+}
+
+.immages {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex: auto;
+}
+
+.category {
+    padding-top: 2rem;
+    float: left;
+}
+
+.category img {
+    box-shadow: 0 10px 10px #222f3e;
+    border-radius: 20px;
+    max-width: 90%;
+    max-height: 80%;
+    width: 450px;
+    height: 400px;
 }
