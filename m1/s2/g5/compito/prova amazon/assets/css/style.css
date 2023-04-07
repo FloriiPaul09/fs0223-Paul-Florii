@@ -3,8 +3,11 @@ body {
     font-family: Arial, Helvetica, sans-serif;
 }
 
-header {
+.dark-gray {
     background-color: #222f3e;
+}
+
+header {
     padding-top: 0.5rem;
     padding-bottom: 0.5rem;
     padding-left: 2rem;
@@ -14,8 +17,11 @@ header img {
     width: 9%;
 }
 
-nav {
+.light-gray {
     background-color: #3a495a;
+}
+
+nav {
     color: #fff;
 }
 
@@ -62,6 +68,7 @@ main {
     padding-bottom: 1rem;
     padding-left: 1.5rem;
     padding-right: 1.5rem;
+    font-weight: bold;
 }
 
 .immages {
@@ -83,4 +90,29 @@ main {
     max-height: 80%;
     width: 450px;
     height: 400px;
+}
+
+.big {
+    margin-top: 2rem;
+    text-align: center;
+    font-weight: bold;
+}
+
+.big div img {
+    max-width: 100%;
+}
+
+footer {
+    margin-top: 2rem;
+    color: #fff;
+    text-align: center;
+}
+
+footer .light-gray {
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+}
+
+footer .light-gray a:link {
+    color: #fff;
 }
