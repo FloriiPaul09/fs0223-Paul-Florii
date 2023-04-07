@@ -55,7 +55,7 @@ REGOLE
     ]
 
     for (i = 0; i < cars.length; i++) {
-        cars[i].licensePlate = 85;
+        cars[i].licensePlate = "aa85aa";
         console.log(cars[i]);
     }
 
@@ -110,6 +110,11 @@ REGOLE
     const numericArray = [
         6, 90, 45, 75, 84, 98, 35, 74, 31, 2, 8, 23, 100, 32, 66, 313, 321, 105,
     ]
+    while (numericArray.length > 0) {
+
+        console.log(numericArray.pop());
+    }
+    console.log(numericArray);
 
 
 }
@@ -120,6 +125,31 @@ REGOLE
 */
 {
     const charactersArray = ["g", "n", "u", "z", "d"]
+    let newCharactersArray = [];
+    for (i = 0; i < charactersArray.length; i++) {
+
+        switch (charactersArray[i]) {
+            case "g":
+                newCharactersArray.push(6);
+                break;
+            case "n":
+                newCharactersArray.push(2);
+                break;
+            case "u":
+                newCharactersArray.push(5);
+                break;
+            case "z":
+                newCharactersArray.push(3);
+                break;
+            case "d":
+                newCharactersArray.push(1);
+                break;
+        }
+
+
+    }
+    console.log(newCharactersArray);
+
 
 
 }
