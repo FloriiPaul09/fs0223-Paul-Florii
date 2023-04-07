@@ -110,7 +110,11 @@ REGOLE
     const numericArray = [
         6, 90, 45, 75, 84, 98, 35, 74, 31, 2, 8, 23, 100, 32, 66, 313, 321, 105,
     ]
-
+    let n = 0;
+    while (n < numericArray.length) {
+        console.log(numericArray[n]);
+        n++;
+    }
 
 }
 /* ESERCIZIO 10
