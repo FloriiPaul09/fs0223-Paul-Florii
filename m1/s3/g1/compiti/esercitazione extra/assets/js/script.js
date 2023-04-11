@@ -162,27 +162,54 @@
 /* EXTRA 7
 Crea una funzione chiamata "average" che riceve un array come parametro e ne ritorna la media aritmetica. La funzione salta automaticamente i valori non numerici nell'array.
 */
-
-
-
+{
+    function average(array) {
+        let sum = 0;
+        for (let i = 0; i < array.length; i++) {
+            if (typeof array[i] === "number") {
+                sum += array[i];
+            }
+        }
+        return sum / array.length;
+    }
+    console.log(average([40, 100, 525, 750]));
+}
 /* EXTRA 8
  Crea una funzione chiamata "longest" che trova la stringa più lunga all'interno di un array di stringhe fornito come parametro.
 */
 
-/* SCRIVI QUI LA TUA RISPOSTA */
+{
+    function longest(array) {
+        let longest = "";
+        for (let i = 0; i < array.length; i++) {
+            if (array[i].length > longest.length) {
+                longest = array[i];
+            }
+        }
+        return longest;
+    }
+    console.log(longest(["Medusa", "Gallina", "Delfino", "Tasso", "Scimpanze"]))
+}
 
 /* EXTRA 9
  Crea una funzione per creare un filtro anti-spam per la tua casella email. La funzione riceve un parametro stringa chiamato "emailContent", e torna un valore booleano.
  La funzione deve ritornare true se "emailContent" non contiene le parole "SPAM" o "SCAM".
 */
 
-/* SCRIVI QUI LA TUA RISPOSTA */
+{
+    function isSpam(emailContent) {
+        return emailContent.indexOf("SPAM") === -1 && emailContent.indexOf("SCAM") === -1;
+    }
+    console.log(isSpam("SPAM"));
+}
 
 /* EXTRA 10
  Scrivi una funzione che riceve una data come parametro, e calcola il numero di giorni passati da quella data.
 */
 
-/* SCRIVI QUI LA TUA RISPOSTA */
+{
+
+}
 
 /* EXTRA 11
  Scrivi una funzione chiamata "matrixGenerator" che riceve come paremetri due numeri interi, "x" e "y".
