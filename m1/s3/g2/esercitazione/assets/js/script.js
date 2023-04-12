@@ -97,9 +97,25 @@
   es.: ["EPICODE", "is", "great"] => [7, 2, 5]
 */
 
+{
+    function lenghtArray(array) {
+        let lenghtArray = [];
+        lenghtArray = array.map(element => element.length);
+        return lenghtArray;
+
+    }
+    console.log(lenghtArray(["ritorno", "is", "absurd"]));
+}
+
 /* ESERCIZIO 9
   Scrivi una funzione per creare un array contenente tutti i valori DISPARI da 1 a 99.
 */
+
+{
+    function oddArray(array) {
+
+    }
+}
 
 /* Questo array di film verrà usato negli esercizi a seguire. Non modificarlo e scorri oltre per riprendere gli esercizi :) */
 const movies = [{
