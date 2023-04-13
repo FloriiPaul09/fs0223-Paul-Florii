@@ -73,12 +73,15 @@ const addParagraph = function() {
 /* ESERCIZIO 7
    Scrivi una funzione che faccia scomparire la prima lista non ordinata
 */
+{
+    const hideFirstUl = function() {
+        let ul = document.getElementById('firstList');
+        ul.style.display = 'none';
 
-const hideFirstUl = function() {
+    }
 
-
+    hideFirstUl();
 }
-
 /* ESERCIZIO 8 
    Scrivi una funzione che renda verde il background di ogni lista non ordinata
   */
