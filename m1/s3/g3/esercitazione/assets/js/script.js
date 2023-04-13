@@ -27,17 +27,26 @@
   */
 {
     const changePcontent = function() {
-        let pContent = changePcontent.textContent;
-        pContent =
+        // let pContent = changePcontent.textContent;
+        // pContent = chil
 
     }
 }
 /* ESERCIZIO 4
    Scrivi una funzione che cambi la proprietà href di ogni link (tranne quello nel footer) con il valore https://www.google.com
   */
+{
+    const changeUrls = function() {
+        let urls = changeUrls.textContent;
+        urls = document.querySelectorAll('div a');
+        urls.forEach(url => {
 
-const changeUrls = function() {
+            url.href = 'https://www.google.com';
+            url.target = '_blank';
+        });
 
+    }
+    console.log(changeUrls());
 
 }
 
