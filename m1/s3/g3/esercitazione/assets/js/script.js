@@ -85,12 +85,17 @@ const addParagraph = function() {
 /* ESERCIZIO 8 
    Scrivi una funzione che renda verde il background di ogni lista non ordinata
   */
+{
+    const paintItGreen = function() {
+        let color = document.querySelectorAll('ul');
+        color.forEach(color => {
+            color.style.backgroundColor = 'green';
+        });
 
-const paintItGreen = function() {
 
-
+    }
+    paintItGreen();
 }
-
 /* ESERCIZIO 9
    Scrivi una funzione che rimuova l'ultima lettera dall'h1 ogni volta che l'utente lo clicca
   */
