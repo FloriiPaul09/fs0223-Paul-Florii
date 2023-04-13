@@ -3,8 +3,7 @@
 */
 {
     const changeTitle = function() {
-        let newTitle = changeTitle.textContent;
-        newTitle = document.getElementById('titolo');
+        let newTitle = document.getElementById('titolo');
         newTitle.textContent = 'My new title';
 
     }
@@ -15,8 +14,7 @@
 */
 {
     const addClassToTitle = function() {
-        let newClass = addClassToTitle.textContent;
-        newClass = document.getElementById('titolo');
+        let newClass = document.getElementById('titolo');
         newClass.classList.add('myHeading');
 
     }
@@ -27,18 +25,18 @@
   */
 {
     const changePcontent = function() {
-        // let pContent = changePcontent.textContent;
-        // pContent = chil
+        let arr = document.querySelectorAll("div p")
+        for (p of arr) { p.textContent = "Hello it's me... Mario" }
 
     }
+    changePcontent();
 }
 /* ESERCIZIO 4
    Scrivi una funzione che cambi la proprietà href di ogni link (tranne quello nel footer) con il valore https://www.google.com
   */
 {
     const changeUrls = function() {
-        let urls = changeUrls.textContent;
-        urls = document.querySelectorAll('div a');
+        let urls = document.querySelectorAll('div a');
         urls.forEach(url => {
 
             url.href = 'https://www.google.com';
@@ -46,19 +44,23 @@
         });
 
     }
-    console.log(changeUrls());
+    changeUrls();
 
 }
 
 /* ESERCIZIO 5
    Scrivi una funzione che aggiunga un nuovo elemento lista alla seconda lista non ordinata
 */
+{
+    const addToTheSecond = function() {
+        let ul = document.getElementById('secondList');
+        let li = document.createElement('li');
+        li.appendChild(document.createTextNode('4th'));
+        ul.appendChild(li);
 
-const addToTheSecond = function() {
-
-
+    }
+    addToTheSecond();
 }
-
 /* ESERCIZIO 6
    Scrivi una funzione che aggiunga un secondo paragrafo al primo div
 */
