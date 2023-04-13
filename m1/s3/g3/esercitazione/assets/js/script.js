@@ -99,19 +99,30 @@ const addParagraph = function() {
 /* ESERCIZIO 9
    Scrivi una funzione che rimuova l'ultima lettera dall'h1 ogni volta che l'utente lo clicca
   */
+{
+    const makeItClickable = function() {
+        let h1 = document.getElementById('titolo');
+        let testoArr = h1.innerText.split('');
+        testoArr.pop();
+        let newTesto = testoArr.join('');
+        h1.textContent = newTesto;
 
-const makeItClickable = function() {
-
-
+    }
+    document.getElementById('titolo')
+        .addEventListener('click', makeItClickable);
 }
-
 /* ESERCIZIO 10
    Crea una funzione che, al click sul footer, riveli l'URL del link interno come contenuto di un alert()
   */
+{
+    const revealFooterLink = function() {
+        let footer = document.querySelector('footer');
+        let url = footer.querySelector('a').href;
+        alert(url);
 
-const revealFooterLink = function() {
-
-
+    }
+    document.querySelector('footer')
+        .addEventListener('click', revealFooterLink);
 }
 
 /* ESERCIZIO 11
