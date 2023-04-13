@@ -129,10 +129,27 @@ const addParagraph = function() {
    Crea una funzione che crei una tabella nell'elemento con id "tableArea". 
    La tabella avrà 5 elementi e questa struttura: immagine, nome prodotto, quantità, prezzo
 */
+{
+    const generateTable = function() {
+        let target = document.querySelector('#tableArea');
+        let tabella = document.createElement('table');
+        let thead = document.createElement('thead');
+        let primaTr = document.createElement('tr');
 
-const generateTable = function() {
+        thead.appendChild(primaTr);
+        tabella.appendChild(thead);
+        target.appendChild(tabella);
 
+        let colonne = ['Immagine', 'Nome', 'Quantità', 'Prezzo'];
 
+        for (let colonna of colonne) {
+            let th = document.createElement('th');
+            th.textContent = colonna;
+            primaTr.append(th);
+        }
+
+    }
+    generateTable();
 }
 
 /* ESERCIZIO 12
