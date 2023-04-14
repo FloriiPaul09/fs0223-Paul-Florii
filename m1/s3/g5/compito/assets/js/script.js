@@ -77,9 +77,19 @@ REGOLE
   Crea una funzione chiamata "dice": deve generare un numero casuale tra 1 e 6.
 */
 
+{
+    let dice = () => Math.floor(Math.random() * 6) + 1;
+    console.log(dice());
+}
+
 /* ESERCIZIO 2
   Crea una funzione chiamata "whoIsBigger" che riceve due numeri come parametri e ritorna il maggiore dei due.
 */
+
+{
+    let whoIsBigger = (a, b) => a > b ? a : b;
+    console.log(whoIsBigger(30, 15));
+}
 
 /* ESERCIZIO 3
   Crea una funzione chiamata "splitMe" che riceve una stringa come parametro e ritorna un'array contenente ogni parola della stringa.
@@ -87,10 +97,26 @@ REGOLE
   Es.: splitMe("I love coding") => ritorna ["I", "Love", "Coding"]
 */
 
+{
+    let splitMe = (str) => str.split(' ');
+    console.log(splitMe("Questa frase è splittata"));
+}
+
 /* ESERCIZIO 4
   Crea una funzione chiamata "deleteOne" che riceve una stringa e un booleano come parametri.
   Se il valore booleano è true la funzione deve ritornare la stringa senza il primo carattere, altrimenti la deve ritornare senza l'ultimo.
 */
+
+{
+    let deleteOne = (str, bool) => {
+        if (bool === true) {
+            return str.slice(1);
+        } else {
+            return str.slice(0, -1);
+        }
+    }
+    console.log(deleteOne("Supercalifragilistichespiralidoso", true));
+}
 
 /* ESERCIZIO 5
   Crea una funzione chiamata "onlyLetters" che riceve una stringa come parametro e la ritorna eliminando tutte le cifre numeriche.
@@ -98,9 +124,22 @@ REGOLE
   Es.: onlyLetters("I have 4 dogs") => ritorna "I have dogs"
 */
 
+{
+    let onlyLetters = (str) => str.replace(/[0-9]/g, '');
+    console.log(onlyLetters("It is Five not 5"));
+}
+
 /* ESERCIZIO 6
   Crea una funzione chiamata "isThisAnEmail" che riceve una stringa come parametro e ritorna true se la stringa è un valido indirizzo email.
 */
+
+{
+    let isThisAnEmail = (email) => {
+        let regex = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+        return regex.test(email);
+    }
+    console.log(isThisAnEmail("ychagexamplecom"));
+}
 
 /* ESERCIZIO 7
   Scrivi una funzione chiamata "whatDayIsIt" che ritorna il giorno della settimana corrente.
