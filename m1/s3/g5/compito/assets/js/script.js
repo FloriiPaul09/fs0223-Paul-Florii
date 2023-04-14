@@ -180,12 +180,30 @@ REGOLE
 */
 
 {
+    let dice = () => Math.floor(Math.random() * 6) + 1;
 
+    let rollTheDices = (n) => {
+        sum = 0;
+        values = [];
+        for (let i = 0; i < n; i++) {
+            sum += dice();
+            values.push(dice());
+        }
+        return {
+            sum: sum,
+            values: values
+        }
+    }
+    console.log(rollTheDices(5));
 }
 
 /* ESERCIZIO 9
   Scrivi una funzione chiamata "howManyDays" che riceve una data come parametro e ritorna il numero di giorni trascorsi da tale data.
 */
+
+{
+
+}
 
 /* ESERCIZIO 10
   Scrivi una funzione chiamata "isTodayMyBirthday" che deve ritornare true se oggi è il tuo compleanno, falso negli altri casi.
