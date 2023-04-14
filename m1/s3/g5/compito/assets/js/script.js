@@ -145,6 +145,27 @@ REGOLE
   Scrivi una funzione chiamata "whatDayIsIt" che ritorna il giorno della settimana corrente.
 */
 
+{
+    let whatDayIsIt = () => {
+        let today = new Date();
+        let day = today.getDay();
+        let month = today.getMonth();
+        let year = today.getFullYear();
+        if (day === 0) {
+            day = 7;
+        }
+        if (month === 0) {
+            month = 11;
+        }
+        return {
+            day: day,
+            month: month,
+            year: year
+        }
+
+    }
+    console.log(whatDayIsIt());
+}
 /* ESERCIZIO 8
   Scrivi una funzione chiamata "rollTheDices" che riceve un numero come parametro.
   Deve invocare la precedente funzione dice() il numero di volte specificato nel parametro, e deve tornare un oggetto contenente una proprietà "sum":
@@ -157,6 +178,10 @@ REGOLE
       values: [3, 3, 4]
   }
 */
+
+{
+
+}
 
 /* ESERCIZIO 9
   Scrivi una funzione chiamata "howManyDays" che riceve una data come parametro e ritorna il numero di giorni trascorsi da tale data.
