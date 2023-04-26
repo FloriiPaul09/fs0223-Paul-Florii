@@ -27,28 +27,53 @@
 @media screen and (min-width: 1025px) {}
 
 
+/*titles*/
+
+h2 {
+    color: brown;
+    font-weight: bold;
+    font-size: 2.5em;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+h3 {
+    color: brown;
+    font-weight: bold;
+    font-size: 2em;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+
 /*nav*/
 
 #navigation ul {
+    color: brown;
+    padding: 10px 20px;
     list-style: none;
     display: flex;
     background-color: rgb(252, 237, 215);
     align-items: center;
-    align-content: center;
-}
-
-#navigation li:first {
-    flex-grow: 2;
+    flex-direction: row;
 }
 
 #navigation ul li {
     flex-direction: row;
     background-color: rgb(255, 225, 128);
     border-radius: 20px;
+    padding: 10px 20px;
+    font-weight: bold;
+    text-align: center;
 }
 
 #navigation ul li img {
     width: 50px;
+}
+
+#navigation ul li span {
+    font-weight: bold;
+    font-size: 1.2em;
 }
 
 
@@ -87,9 +112,12 @@
 
 .cards button {
     margin-bottom: 10px;
+    font-weight: bold;
+    color: brown;
     background-color: rgb(255, 225, 128);
     border-radius: 20px;
     border-color: transparent;
+    padding: 10px 45px;
 }
 
 
@@ -102,7 +130,7 @@
 }
 
 #news h4 {
-    font-weight: bolder;
+    font-weight: bold;
     margin-bottom: 15px;
     color: brown;
     font-size: 1.5em;
