@@ -8,17 +8,17 @@ body {
 /*titoli, paragrafi e attributi in comune*/
 
 h3 {
-    font-size: 5rem;
+    font-size: 2rem;
     font-weight: bold;
 }
 
 p {
-    font-size: 3rem;
+    font-size: 1.5rem;
 }
 
 div {
-    width: 500px;
-    height: 380px;
+    width: 180px;
+    height: 120px;
     box-shadow: 4px 4px 10px 0px rgba(0, 0, 0, 0.58);
     /* padding: 130px 110px; */
     margin-left: 20px;
@@ -40,10 +40,6 @@ div {
 /*classe postit gialli*/
 
 .yellow {
-    width: 500px;
-    height: 380px;
-    box-shadow: 4px 4px 10px 0px rgba(0, 0, 0, 0.58);
-    /* padding: 130px 110px; */
     transform: rotate(355deg);
     background: rgb(154, 154, 154);
     background: linear-gradient(0deg, rgba(154, 154, 154, 1) 0%, rgba(255, 247, 127, 1) 57%);
@@ -71,6 +67,6 @@ div {
 /*Tutti i postit*/
 
 div:hover {
-    transform: scale(1.2);
+    transform: scale(1.4);
     z-index: 1;
 }
