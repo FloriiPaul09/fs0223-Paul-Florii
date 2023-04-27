@@ -1,0 +1,76 @@
+body {
+    font-family: 'Indie Flower', cursive;
+    margin: 80px 150px;
+    background-color: gray;
+}
+
+
+/*titoli, paragrafi e attributi in comune*/
+
+h3 {
+    font-size: 5rem;
+    font-weight: bold;
+}
+
+p {
+    font-size: 3rem;
+}
+
+div {
+    width: 500px;
+    height: 380px;
+    box-shadow: 4px 4px 10px 0px rgba(0, 0, 0, 0.58);
+    /* padding: 130px 110px; */
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-bottom: 70px;
+}
+
+
+/*container postit*/
+
+#container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+
+/*classe postit gialli*/
+
+.yellow {
+    width: 500px;
+    height: 380px;
+    box-shadow: 4px 4px 10px 0px rgba(0, 0, 0, 0.58);
+    /* padding: 130px 110px; */
+    transform: rotate(355deg);
+    background: rgb(154, 154, 154);
+    background: linear-gradient(0deg, rgba(154, 154, 154, 1) 0%, rgba(255, 247, 127, 1) 57%);
+}
+
+
+/*classe postit verdi*/
+
+.green {
+    transform: rotate(5deg);
+    background: rgb(154, 154, 154);
+    background: linear-gradient(0deg, rgba(154, 154, 154, 1) 0%, rgba(150, 222, 127, 1) 57%);
+}
+
+
+/*classe postit viola*/
+
+.purple {
+    transform: rotate(353deg);
+    background: rgb(154, 154, 154);
+    background: linear-gradient(0deg, rgba(154, 154, 154, 1) 0%, rgba(127, 145, 222, 1) 57%);
+}
+
+
+/*Tutti i postit*/
+
+div:hover {
+    transform: scale(1.2);
+    z-index: 1;
+}
