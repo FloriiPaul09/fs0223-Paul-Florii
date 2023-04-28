@@ -98,6 +98,10 @@ ul {
     margin-bottom: 150px;
 }
 
+.hero .sv {
+    position: relative;
+}
+
 .trending {
     margin-top: 20px;
     display: flex;
