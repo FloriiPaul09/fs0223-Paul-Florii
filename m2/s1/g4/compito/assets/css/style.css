@@ -1,11 +1,22 @@
 h2 {
-    font-size: 7em;
+    font-size: 6em;
     margin-bottom: 20px;
+    font-family: 'Spectral', serif;
+    font-weight: 500;
 }
 
-h3 {
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+.h3 {
+    display: flex;
     font-weight: bold;
     margin-bottom: 20px;
+    font-family: 'Roboto', sans-serif;
+    justify-content: flex-start;
+    align-items: center;
+    align-content: center;
 }
 
 ul {
@@ -91,6 +102,47 @@ ul li:nth-child(1) {
     justify-content: space-around;
 }
 
+.number {
+    color: rgba(200, 200, 200, 0.70);
+    font-weight: bold;
+    font-size: 1.5rem;
+    margin-right: 10px;
+}
+
+.contentArticle {
+    line-height: 22px;
+}
+
+.contentArticle img {
+    border-radius: 20px;
+    width: 25px;
+}
+
+.contentArticle .author {
+    font-weight: bold;
+}
+
+.contentArticle .title {
+    margin-top: 5px;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.contentArticle .content {
+    color: rgb(100, 100, 100);
+}
+
+.contentArticle .details {
+    color: rgba(107, 107, 107, 0.7);
+}
+
+.contentArticle .topic {
+    color: rgb(100, 100, 100);
+    background-color: rgba(107, 107, 107, 0.5);
+    padding: 5px 10px;
+    border-radius: 20px;
+}
+
 .flexContainerArticle {
     display: flex;
     flex-direction: row;
@@ -104,9 +156,11 @@ ul li:nth-child(1) {
 }
 
 .trenArticle {
+    margin-top: 25px;
+    height: auto;
     width: 350px;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: flex-start;
 }
 
@@ -116,12 +170,30 @@ ul li:nth-child(1) {
 }
 
 flexArticle {
+    align-content: space-between;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
 }
 
 .article {
+    margin-top: 40px;
+    display: flex;
+    align-items: center;
+    align-content: center;
     max-width: 500px;
     flex-grow: 1;
+}
+
+.space {
+    display: flex;
+}
+
+.bookmark {
+    width: 30px;
+}
+
+.image {
+    height: 100px;
+    width: 150px;
 }
