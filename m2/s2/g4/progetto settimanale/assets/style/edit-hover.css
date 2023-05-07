@@ -1,0 +1,8 @@
+.btn-dark:hover {
+    background-color: #fff !important;
+    color: black !important;
+}
+
+.btn-secondary:hover {
+    background-color: black;
+}
