@@ -11,20 +11,32 @@ let loadPrimary = function () {
                 'Authorization': keyApi
             }
         });
-    });
-};
+        fetch('https://api.pexels.com/v1/search?query=animals')
+        .then(resp => resp.json())
+        .then(data => {
+            console.log(data.photos);
+    })
+    .catch(err => console.log(err));
+});
+}
 loadPrimary();
 
 //function of the button with id "secondaryImg" for the fetch of the secondary images
 let loadSecondary = function () {
     let secondaryImg = document.getElementById('secondaryImg');
     secondaryImg.addEventListener('click', function () {
-        let secondary = fetch('https://api.pexels.com/v1/search?query=house',{
+        fetch('https://api.pexels.com/v1/search?query=house',{
             method: 'GET',
-                        headers: {
-                            'Authorization': keyApi
-                        }
-        });
+            headers: {
+                'Authorization': keyApi
+            }
+            });
+        fetch('https://api.pexels.com/v1/search?query=house')
+            .then(resp => resp.json())
+            .then(data => {
+                console.log(data.photos);
+            })
+            .catch(err => console.log(err));    
         })
     }
 loadSecondary();
