@@ -1,4 +1,4 @@
-const AGENDA_URL = 'https://striveschool-api.herokuapp.com/api/agenda/'
+const urlSite = "https://striveschool-api.herokuapp.com/api/product/";
 
 let addressBarContent = new URLSearchParams(window.location.search)
 
@@ -36,7 +36,7 @@ if (eventId) {
 
 
 
-  fetch(AGENDA_URL + eventId)
+  fetch(urlSite + eventId)
 
     .then((res) => {
       if (res.ok) {
@@ -54,7 +54,7 @@ if (eventId) {
       document.getElementById('name').value = event.name
       document.getElementById('description').value = event.description
       document.getElementById('price').value = event.price
-      document.getElementById('time').value = event.time.split('.000Z')[0] // trucchetto per ripopolare correttamente un input date
+      document.getElementById('imageUrl').value = event.time.split('.000Z')[0] // trucchetto per ripopolare correttamente un input date
     })
     .catch((error) => {
       console.log(error)
@@ -72,19 +72,19 @@ eventForm.addEventListener('submit', function (e) {
   let nameInput = document.getElementById('name')
   let descriptionInput = document.getElementById('description')
   let priceInput = document.getElementById('price')
-  let timeInput = document.getElementById('time')
+  let imgInput = document.getElementById('imageUrl')
 
 
   let newEvent = {
     name: nameInput.value,
     description: descriptionInput.value,
     price: priceInput.value,
-    time: timeInput.value,
+    time: imgInput.value,
   }
   console.log('evento pronto da inviare alle API', newEvent)
 
 
-  fetch(eventId ? AGENDA_URL + eventId : AGENDA_URL, {
+  fetch(eventId ? urlSite + eventId : urlSite, {
 
     method: eventId ? 'PUT' : 'POST',
     body: JSON.stringify(newEvent), 
