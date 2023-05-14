@@ -7,7 +7,7 @@ let productId = adressBar.get("productId");
 console.log('ProductID', productId);
 
 if(productId) {
-  document.getElementsByTagName('h2')[0].innerHTML = 'BackOffice page - Modify Product';
+  document.getElementsByTagName('h2')[0].innerHTML = 'EStore Back Page - Modify Product';
 
   document.getElementById('save-button').innerText = 'Modify Product';
 
