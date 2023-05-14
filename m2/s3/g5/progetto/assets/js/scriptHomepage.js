@@ -15,22 +15,24 @@ const getEvents = function () {
         }
       })
       .then((data) => {
-        console.log("EVENTI IN DB", data)
-        data.forEach((event) => {
+        console.log("PRODUCT IN DB", data)
+        data.forEach((product) => {
           let colTemplate = `
           <div class="col-12 col-md-3">
             <div class="card">
+              <img src="${product.imageUrl}" alt"${product.name}">
               <div class="card-body">
-                <h5 class="card-title">${event.name}</h5>
+                <h5 class="card-title">${product.brand} ${product.name}</h5>
                 <p class="card-text">
-                  ${event.description}
+                  ${product.description}
                 </p>
-                <p>${new Date(event.time).toLocaleDateString('it-IT')} - ${
-            event.price
+                <p>${
+            product.price
           }€</p>
-                <a href="./backoffice.html?eventId=${
-                  event._id
-                }" class="btn btn-primary">MODIFICA</a>
+                <a href="backOffice.html?eventId=${
+                  product._id
+                }" class="btn btn-primary">Modify</a>
+                <a href="" class="btn btn-info">Details</a>
               </div>
             </div>
           </div>

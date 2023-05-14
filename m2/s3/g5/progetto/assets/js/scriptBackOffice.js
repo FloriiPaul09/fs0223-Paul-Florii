@@ -1,112 +1,105 @@
 const urlSite = "https://striveschool-api.herokuapp.com/api/product/";
 
-let addressBarContent = new URLSearchParams(window.location.search)
+let adressBar = new URLSearchParams(window.location.search);
 
-let eventId = addressBarContent.get('eventId')
+let productId = adressBar.get("productId");
 
-console.log('EVENTID', eventId)
+console.log('EVENTID', productId);
 
-if (eventId) {
+if(productId) {
+  document.getElementsByTagName('h2')[0].innerHTML = 'BackOffice page - Modify Product';
 
+  document.getElementById('save-button').innerText = 'Modify Product';
 
-  document.getElementsByTagName('h2')[0].innerText =
-    'Backoffice page - Modifica evento'
-
-  document.getElementById('save-button').innerText = 'MODIFICA EVENTO'
-
-  let deleteButton = document.getElementById('delete-button')
-  deleteButton.classList.remove('d-none')
-  deleteButton.addEventListener('click', () => {
-    fetch(AGENDA_URL + eventId, {
-      method: 'DELETE',
-
+  let deleteBtn = document.getElementById('delete-button');
+  deleteBtn.classList.remove('d-none');
+  deleteBtn.addEventListener('click', () => {
+    fetch(urlSite + productId, {
+      'method': 'DELETE',
     })
-      .then((res) => {
-        if (res.ok) {
-          alert('eliminazione completata con successo')
-          location.assign('./index.html')
-        } else {
-          throw new Error("Problema nell'eliminazione dell'evento")
-        }
-      })
-      .catch((err) => {
-        console.log(err)
-      })
-  })
-
-
-
-  fetch(urlSite + eventId)
 
     .then((res) => {
       if (res.ok) {
-        return res.json()
+        alert('The elimination was successful')
+        location.assign('./index.html')
       } else {
-        throw new Error("Errore nel recupero dell'evento")
-      }
-    })
-    .then((event) => {
-      console.log(
-        'DATI DEL SINGOLO EVENTO, RECUPERATO TRAMITE GET SINGOLA',
-        event
-      )
-
-      document.getElementById('name').value = event.name
-      document.getElementById('description').value = event.description
-      document.getElementById('price').value = event.price
-      document.getElementById('imageUrl').value = event.time.split('.000Z')[0] // trucchetto per ripopolare correttamente un input date
-    })
-    .catch((error) => {
-      console.log(error)
-    })
-} else {
-
-}
-
-
-const eventForm = document.getElementById('event-form')
-eventForm.addEventListener('submit', function (e) {
-  e.preventDefault()
-  console.log('invio i dati')
-
-  let nameInput = document.getElementById('name')
-  let descriptionInput = document.getElementById('description')
-  let priceInput = document.getElementById('price')
-  let imgInput = document.getElementById('imageUrl')
-
-
-  let newEvent = {
-    name: nameInput.value,
-    description: descriptionInput.value,
-    price: priceInput.value,
-    time: imgInput.value,
-  }
-  console.log('evento pronto da inviare alle API', newEvent)
-
-
-  fetch(eventId ? urlSite + eventId : urlSite, {
-
-    method: eventId ? 'PUT' : 'POST',
-    body: JSON.stringify(newEvent), 
-    headers: {
-        "Authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDVlNTBjNDg4Zjc0MDAwMTQyODc5ODEiLCJpYXQiOjE2ODM5NjI2MzIsImV4cCI6MTY4NTE3MjIzMn0.KW8Ppe_B0MqoQ-G5tlzlvkuk0JlmY0YoNgq8_9LLsdA",
-        'Content-Type': 'application/json',
-    },
-  })
-    .then((res) => {
-
-      console.log('RESPONSE DELLA CHIAMATA POST', res)
-      if (res.ok) {
-
-        alert(eventId ? 'EVENTO MODIFICATO!' : 'EVENTO CREATO!')
-        location.assign('/index.html')
-      } else {
-
-        alert('ERRORE NEL SALVATAGGIO')
-        throw new Error('ERRORE NEL SALVATAGGIO')
+        throw new Error('There was a problem in the elimination of the product')
       }
     })
     .catch((err) => {
       console.log(err)
     })
+
+  })
+
+  fetch(urlSite + productId)
+  .then((res) => {
+    if (res.ok){
+      return res.json()
+    } else {
+      throw new Error('There was an error in the fetching of the product')
+    }
+  })
+  .then((product) => {
+    console.log('Data of the selected product', product)
+
+    document.getElementById('name').value = product.name;
+    document.getElementById('brand').value = product.brand;
+    document.getElementById('description').value = product.description;
+    document.getElementById('price').value = product.price;
+    document.getElementById('imageUrl').value = product.imageUrl;
+
+  })
+  .catch((error) => {
+    console.log(error)
+  })
+} else {
+  const productForm = document.getElementById('product-form');
+  productForm.addEventListener('submit', (e) => {
+    e.preventDefault()
+    console.log('Sending the product')
+
+    let nameInput = document.getElementById('name');
+    let brandInput = document.getElementById('brand');
+    let descriptionInput = document.getElementById('description');
+    let priceInput = document.getElementById('price');
+    let imageInput = document.getElementById('imageUrl');
+
+    let newProduct = {
+      name: nameInput.value,
+      brand: brandInput.value,
+      description: descriptionInput.value,
+      price: priceInput.value,
+      imageUrl: imageInput.value,
+    }
+
+    console.log('Ready to sent the new product to the API', newProduct)
+    
+    fetch(productId ? urlSite + productId : urlSite, {
+      'method': productId ? 'PUT' : 'POST',
+      'body': JSON.stringify(newProduct),
+      'headers': {
+        'Authorization' : 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDVlNTBjNDg4Zjc0MDAwMTQyODc5ODEiLCJpYXQiOjE2ODM5NjI2MzIsImV4cCI6MTY4NTE3MjIzMn0.KW8Ppe_B0MqoQ-G5tlzlvkuk0JlmY0YoNgq8_9LLsdA',
+        'Content-Type' : 'application/json',
+      },
+    })
+    .then((res) => {
+      console.log('Result', res)
+      if (res.ok){
+        alert(productId ? 'Product modified successfully' : 'Product added successfully')
+        location.assign('../../Homepage.html')
+      } else {
+        alert('Error in creating the new product')
+        throw new Error ('Product creation failed')
+      }
+
+    })
+      .catch((err) =>{
+        console.log(err)
+      })
 })
+
+}
+
+
+
