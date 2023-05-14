@@ -4,7 +4,7 @@ let adressBar = new URLSearchParams(window.location.search);
 
 let productId = adressBar.get("productId");
 
-console.log('EVENTID', productId);
+console.log('ProductID', productId);
 
 if(productId) {
   document.getElementsByTagName('h2')[0].innerHTML = 'BackOffice page - Modify Product';
@@ -16,12 +16,15 @@ if(productId) {
   deleteBtn.addEventListener('click', () => {
     fetch(urlSite + productId, {
       'method': 'DELETE',
+      headers: {
+        "Authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDVlNTBjNDg4Zjc0MDAwMTQyODc5ODEiLCJpYXQiOjE2ODM5NjI2MzIsImV4cCI6MTY4NTE3MjIzMn0.KW8Ppe_B0MqoQ-G5tlzlvkuk0JlmY0YoNgq8_9LLsdA"
+    }
     })
 
     .then((res) => {
       if (res.ok) {
         alert('The elimination was successful')
-        location.assign('./index.html')
+        location.assign('Homepage.html')
       } else {
         throw new Error('There was a problem in the elimination of the product')
       }
@@ -87,7 +90,7 @@ if(productId) {
       console.log('Result', res)
       if (res.ok){
         alert(productId ? 'Product modified successfully' : 'Product added successfully')
-        location.assign('../../Homepage.html')
+        location.assign('Homepage.html')
       } else {
         alert('Error in creating the new product')
         throw new Error ('Product creation failed')

@@ -29,7 +29,7 @@ const getEvents = function () {
                 <p>${
             product.price
           }€</p>
-                <a href="backOffice.html?eventId=${
+                <a href="backOffice.html?productId=${
                   product._id
                 }" class="btn btn-primary">Modify</a>
                 <a href="" class="btn btn-info">Details</a>
