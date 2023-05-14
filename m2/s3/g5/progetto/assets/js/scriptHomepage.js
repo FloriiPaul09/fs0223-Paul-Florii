@@ -3,7 +3,7 @@ const urlSite = "https://striveschool-api.herokuapp.com/api/product/";
 const getEvents = function () {
     // parte la fetch()
     fetch(urlSite, {
-        headers: {
+        'headers': {
         "Authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDVlNTBjNDg4Zjc0MDAwMTQyODc5ODEiLCJpYXQiOjE2ODM5NjI2MzIsImV4cCI6MTY4NTE3MjIzMn0.KW8Ppe_B0MqoQ-G5tlzlvkuk0JlmY0YoNgq8_9LLsdA"
     }})
       .then((res) => {
@@ -32,7 +32,7 @@ const getEvents = function () {
                 <a href="backOffice.html?productId=${
                   product._id
                 }" class="btn btn-primary">Modify</a>
-                <a href="" class="btn btn-info">Details</a>
+                <a href="detailsPage.html" class="btn btn-info">Details</a>
               </div>
             </div>
           </div>

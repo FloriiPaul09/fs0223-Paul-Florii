@@ -16,7 +16,7 @@ if(productId) {
   deleteBtn.addEventListener('click', () => {
     fetch(urlSite + productId, {
       'method': 'DELETE',
-      headers: {
+      'headers': {
         "Authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDVlNTBjNDg4Zjc0MDAwMTQyODc5ODEiLCJpYXQiOjE2ODM5NjI2MzIsImV4cCI6MTY4NTE3MjIzMn0.KW8Ppe_B0MqoQ-G5tlzlvkuk0JlmY0YoNgq8_9LLsdA"
     }
     })
