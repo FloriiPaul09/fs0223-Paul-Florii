@@ -1,4 +1,4 @@
-{
+tsc -v{
   "name": "esempio01",
   "version": "1.0.0",
   "description": "prova 1",
