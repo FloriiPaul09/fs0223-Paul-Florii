@@ -18,6 +18,31 @@ var capoAbbigliamento = /** @class */ (function () {
     };
     return capoAbbigliamento;
 }());
-var camicia = new capoAbbigliamento(54, 125, "estiva", "camicia", 34, 2, "azzurro", 28.00, 34.16, "negozio", 68.32);
-console.log(camicia);
-console.log(camicia.mostraPrezzo());
+// let camicia = new capoAbbigliamento(
+//     54,
+//     125,
+//     "estiva",
+//     "camicia",
+//     34,
+//     2,
+//     "azzurro",
+//     28.00,
+//     34.16,
+//     "negozio",
+//     68.32
+// );
+// console.log(camicia);
+// console.log(camicia.mostraPrezzo());
+fetch("Abbigliamento.json")
+    .then(function (response) { return response.json(); })
+    .then(function (data) {
+    var capiAbbigliamento = [];
+    data.array.forEach(function (element) {
+        var capo = new capoAbbigliamento(element.id, element.codprod, element.collezione, element.capo, element.modello, element.quantita, element.colore, element.prezzoivaesclusa, element.prezzoivainclusa, element.disponibile, element.saldo);
+        capiAbbigliamento.push(capo);
+    });
+    console.log(capiAbbigliamento);
+})
+    .catch(function (err) {
+    console.log("Error", err);
+});
