@@ -43,6 +43,33 @@ class capoAbbigliamento {
     }
 }
 
+fetch("abbigliamento.json")
+    .then(response => response.json())
+    .then(data => {
+        const capiAbbigliamento: capoAbbigliamento[] = [];
+
+        data.array.forEach(element => {
+            const capo: capoAbbigliamento = new capoAbbigliamento(
+                element.id,
+                element.codprod,
+                element.collezione,
+                element.capo,
+                element.modello,
+                element.quantita,
+                element.colore,
+                element.prezzoivaesclusa,
+                element.prezzoivainclusa,
+                element.disponibile,
+                element.saldo
+            );
+            capiAbbigliamento.push(capo);
+        });
+        console.log(capiAbbigliamento);
+    })
+    .catch(err => {
+        console.log("Error", err);
+    });
+
 let camicia = new capoAbbigliamento(
     54,
     125,
@@ -56,5 +83,6 @@ let camicia = new capoAbbigliamento(
     "negozio",
     68.32
 );
+
 console.log(camicia);
 console.log(camicia.mostraPrezzo());
