@@ -6,6 +6,7 @@ interface Smartphone{
     carica: number; //credito dello smartphone
     numeroChiamate: number; //chiamate effettuate
     costoMinuto: number; //costo della chiamata al minuto 
+    registroChiamate: {id:number, durata:number, data:number, ora:number};
 
     //metodo della ricarica
     ricarica(euro:number):void;
@@ -30,12 +31,14 @@ class smartphone implements Smartphone {
     carica: number;
     numeroChiamate: number;
     costoMinuto: number;
+    registroChiamate: { id: number; durata: number; data: number; ora: number; };
 
     //costruttore variabili
-    constructor(carica:number, numeroChiamate: number, costoMinuto: number){
+    constructor(carica:number, numeroChiamate: number, costoMinuto: number, registroChiamate:{id:number, durata:number, data:number, ora:number}){
         this.carica = carica;
         this.numeroChiamate = numeroChiamate;
         this.costoMinuto = costoMinuto;
+        this.registroChiamate = registroChiamate;
     }
     
     //definizione metodi:

@@ -3,10 +3,11 @@
 // creazione classe smartphone che implementa l'interfaccia precedentemente definita'
 var smartphone = /** @class */ (function () {
     //costruttore variabili
-    function smartphone(carica, numeroChiamate, costoMinuto) {
+    function smartphone(carica, numeroChiamate, costoMinuto, registroChiamate) {
         this.carica = carica;
         this.numeroChiamate = numeroChiamate;
         this.costoMinuto = costoMinuto;
+        this.registroChiamate = registroChiamate;
     }
     //definizione metodi:
     //1. metodo ricarica
