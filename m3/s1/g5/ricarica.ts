@@ -6,7 +6,7 @@ interface Smartphone{
     carica: number; //credito dello smartphone
     numeroChiamate: number; //chiamate effettuate
     costoMinuto: number; //costo della chiamata al minuto 
-    registroChiamate: {id:number, durata:number, data:number, ora:number};
+    registroChiamate: {id:number, durata:number, dataOra:Date,}[];
 
     //metodo della ricarica
     ricarica(euro:number):void;
@@ -22,6 +22,12 @@ interface Smartphone{
 
     //metodo di azzeramento chiamate
     azzeraChiamate():void;
+
+    //metodo di tutte le chiamate effettuate
+    mostraRegistroChiamate():void;
+
+    //metodo che mostra le chiamate effettuate in una determinata data e ora
+    filtraChiamataPerDataOra():void;
 };
 
 
@@ -31,14 +37,14 @@ class smartphone implements Smartphone {
     carica: number;
     numeroChiamate: number;
     costoMinuto: number;
-    registroChiamate: { id: number; durata: number; data: number; ora: number; };
+    registroChiamate: {id:number, durata:number, dataOra:Date,}[];
 
     //costruttore variabili
-    constructor(carica:number, numeroChiamate: number, costoMinuto: number, registroChiamate:{id:number, durata:number, data:number, ora:number}){
+    constructor(carica:number, numeroChiamate: number, costoMinuto: number){
         this.carica = carica;
         this.numeroChiamate = numeroChiamate;
         this.costoMinuto = costoMinuto;
-        this.registroChiamate = registroChiamate;
+        this.registroChiamate = [];
     }
     
     //definizione metodi:
@@ -71,6 +77,26 @@ class smartphone implements Smartphone {
         this.numeroChiamate = 0;
         console.log(`le chiamate sono state azzerate`);
     }
+
+    //6. metodo di tutte le chiamate effettuate
+    mostraRegistroChiamate(): void {
+        let idChiamata = 
+
+
+        let chiamata = {
+            id: idChiamata,
+            durata: durataChiamata,
+            dataOra: dataOraChiamata
+        };
+        this.registroChiamate.push(chiamata);
+
+        console.log(`L'ID della chiamata e ${idChiamata}`);
+    }
+
+    //7. metodo che mostra le chiamate effettuate in una determinata data e ora
+    filtraChiamataPerDataOra(): void {
+        
+    }
 };
 
 //creazione prima istanza della classe
@@ -83,6 +109,8 @@ console.log(telefonoUno.numero404());
 console.log("Le chiamate effettuate sono:", telefonoUno.getNumeroChiamate());
 telefonoUno.chiamata(108);
 telefonoUno.azzeraChiamate();
+console.log("Registro Chiamate");
+console.log(telefonoUno.registroChiamate);
 console.log(" ");
 
 //creazione seconda istanza della classe

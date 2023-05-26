@@ -3,11 +3,11 @@
 // creazione classe smartphone che implementa l'interfaccia precedentemente definita'
 var smartphone = /** @class */ (function () {
     //costruttore variabili
-    function smartphone(carica, numeroChiamate, costoMinuto, registroChiamate) {
+    function smartphone(carica, numeroChiamate, costoMinuto) {
         this.carica = carica;
         this.numeroChiamate = numeroChiamate;
         this.costoMinuto = costoMinuto;
-        this.registroChiamate = registroChiamate;
+        this.registroChiamate = [];
     }
     //definizione metodi:
     //1. metodo ricarica
@@ -33,6 +33,19 @@ var smartphone = /** @class */ (function () {
         this.numeroChiamate = 0;
         console.log("le chiamate sono state azzerate");
     };
+    //6. metodo di tutte le chiamate effettuate
+    smartphone.prototype.mostraRegistroChiamate = function () {
+        var idChiamata = let, chiamata = {
+            id: idChiamata,
+            durata: durataChiamata,
+            dataOra: dataOraChiamata
+        };
+        this.registroChiamate.push(chiamata);
+        console.log("L'ID della chiamata e ".concat(idChiamata));
+    };
+    //7. metodo che mostra le chiamate effettuate in una determinata data e ora
+    smartphone.prototype.filtraChiamataPerDataOra = function () {
+    };
     return smartphone;
 }());
 ;
@@ -45,6 +58,8 @@ console.log(telefonoUno.numero404());
 console.log("Le chiamate effettuate sono:", telefonoUno.getNumeroChiamate());
 telefonoUno.chiamata(108);
 telefonoUno.azzeraChiamate();
+console.log("Registro Chiamate");
+console.log(telefonoUno.registroChiamate);
 console.log(" ");
 //creazione seconda istanza della classe
 console.log("Secondo telefono");
