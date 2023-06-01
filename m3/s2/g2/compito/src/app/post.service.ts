@@ -6,7 +6,7 @@ import { Post } from 'src/app/model/post';
 })
 export class PostService {
 
-  apiUrl:string = 'src/assets/db.json';
+  apiUrl:string = 'assets/db.json';
 
   constructor() { }
 

@@ -1,9 +1,9 @@
 <div class="container bg-light">
   <header class="d-flex justify-content-center p-3 ">
     <ul class="nav fw-bold text-center">
-      <li class="nav-item m-5 ">Home</li>
-      <li class="nav-item m-5 ">Active Posts</li>
-      <li class="nav-item m-5 ">Disabled Posts</li>
+      <li class="nav-item m-5 "><a [routerLink]="['/']" class="nav-link">Home</a></li>
+      <li class="nav-item m-5 "><a [routerLink]="['/active-post']" class="nav-link">Active Posts</a></li>
+      <li class="nav-item m-5 "><a [routerLink]="['/disable-posts']" class="nav-link">Disabled Posts</a></li>
     </ul>
   </header>
 
