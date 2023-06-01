@@ -26,6 +26,7 @@
             "tsConfig": "tsconfig.app.json",
             "inlineStyleLanguage": "scss",
             "assets": [
+              "node_modules/bootstrap-icons/",
               "src/favicon.ico",
               "src/assets"
             ],
@@ -103,6 +104,6 @@
     }
   },
   "cli": {
-    "analytics": false
+    "analytics": "ba496a61-d42a-400f-a3f8-f9408880fb8c"
   }
 }
