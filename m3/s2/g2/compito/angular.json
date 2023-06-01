@@ -26,7 +26,6 @@
             "tsConfig": "tsconfig.app.json",
             "inlineStyleLanguage": "scss",
             "assets": [
-              "node_modules/bootstrap-icons/",
               "src/favicon.ico",
               "src/assets"
             ],
