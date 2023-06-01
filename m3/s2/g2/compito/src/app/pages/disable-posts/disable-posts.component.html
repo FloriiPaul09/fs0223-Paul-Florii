@@ -1,1 +1,10 @@
-<p>disable-posts works!</p>
+<table class="table">
+
+  <tr *ngFor="let post of postsArray">
+    <td>{{post.id}}</td>
+    <td>{{post.title}}</td>
+    <td>{{post.description}}</td>
+    <td>{{post.active}}</td>
+  </tr>
+
+</table>
