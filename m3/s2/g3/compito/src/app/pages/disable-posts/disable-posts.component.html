@@ -1,0 +1,12 @@
+<table class="table">
+
+  <tr *ngFor="let post of postsArray">
+    <td>{{post.id}}</td>
+    <td>{{post.title}}</td>
+    <td>{{post.description}}</td>
+    <td>{{post.active}}</td>
+    <td>{{post.type}}</td>
+    <td><button class="btn btn-info" (click)="variableStatus(post)"></button></td>
+  </tr>
+
+</table>

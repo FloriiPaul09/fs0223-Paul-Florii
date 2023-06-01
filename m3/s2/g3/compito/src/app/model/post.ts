@@ -1,0 +1,15 @@
+export class Post {
+  id:number;
+  title:string;
+  description:string;
+  active:boolean;
+  type:string;
+
+  constructor(id:number, title:string, description:string, active:boolean, type:string){
+    this.id = id;
+    this.title = title;
+    this.description = description;
+    this.active = active;
+    this.type = type;
+  }
+}
