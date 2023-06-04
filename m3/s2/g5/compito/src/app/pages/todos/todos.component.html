@@ -8,5 +8,16 @@
     <td>{{task.id}}</td>
     <td>{{task.title}}</td>
     <td>{{task.completed}}</td>
+    <td>
+      <form>
+        <input [(ngModel)]="task.title" type="text" placeholder="Add Title" name="title"/>
+        <input [(ngModel)]="task.completed" type="checkbox" name="completed">
+        <button (click)="delete(task.id)">DELETE</button>
+        <button (click)="modifyTask($event, task)">EDIT</button>
+      </form>
+    </td>
   </tr>
 </table>
+
+
+

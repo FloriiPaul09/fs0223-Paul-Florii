@@ -39,7 +39,7 @@ export class TodoService {
       }).then(response => response.json());
     }
 
-    modifyTask(task:Todo){
+    updateTask(task:Todo){
       return fetch(this.urlSite + '/' + task.id, {
         method : 'PUT',
         headers : {'content-type': 'application/json'},

@@ -31,5 +31,12 @@ export class TodosComponent implements OnInit {
         this.loading = false;
       })
     }
+
+    modifyTask(event:Event, todo:Todo){
+      event.preventDefault();
+      this.todoSrvc.updateTask(todo).then(response =>{
+        this.getList();
+      })
+    }
 }
 
