@@ -1,1 +1,12 @@
-<p>todos works!</p>
+<div>
+  <p class="caricamento" *ngIf="loading">Loading...</p>
+  <p class="risultato" *ngIf="tasks.length == 0 && !loading">Loading has failed, can't find any tasks!</p>
+</div>
+
+<table>
+  <tr *ngFor="let task of tasks">
+    <td>{{task.id}}</td>
+    <td>{{task.title}}</td>
+    <td>{{task.completed}}</td>
+  </tr>
+</table>

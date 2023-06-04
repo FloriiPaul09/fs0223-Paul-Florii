@@ -9,7 +9,7 @@ import { TodoService } from 'src/app/todo.service';
 })
 export class TodosComponent implements OnInit {
   tasks: Todo[] = [];
-  status: boolean = false;
+  loading: boolean = true;
 
   constructor(private todoSrvc:TodoService){}
 
@@ -26,7 +26,10 @@ export class TodosComponent implements OnInit {
 
     getList(){
       this.todoSrvc.getList().then(response =>{
-        this.tasks = response;
+        let todos = response.filter(todo => !todo.completed)
+        this.tasks = todos;
+        this.loading = false;
       })
     }
 }
+
