@@ -46,4 +46,10 @@ export class TodoService {
         body : JSON.stringify(task)
       }).then(response => response.json())
     }
+
+    deleteTask(id:number = 0){
+      return fetch(this.urlSite + '/' + id, {
+        method : 'DELETE',
+      }).then(response => response.json());
+    }
 }
