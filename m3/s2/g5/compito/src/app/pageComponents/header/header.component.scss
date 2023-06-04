@@ -1,5 +1,5 @@
 header{
-  margin: 40px 50px;
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
 }
 
 ul{
@@ -16,7 +16,6 @@ li{
 
 a{
   font-weight: 600;
-  color: rgb(0, 0, 0);
   padding: 15px 40px;
 
 }
@@ -27,4 +26,12 @@ a:link{
 
 a:visited{
   text-decoration: none;
+}
+
+.todo{
+  color:rgb(111, 19, 150);
+}
+
+.completed{
+  color: rgb(10, 97, 10);
 }

@@ -1,0 +1,70 @@
+.body{
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+
+table{
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+}
+
+td{
+  font-size: 1.8rem;
+  justify-content: space-between;
+}
+
+.bi{
+  margin: 10px 15px 0px 15px;
+
+}
+
+button{
+  font-size: 1.4rem;
+  padding: 10px 20px;
+  margin: 15px;
+  font-weight: bold;
+}
+
+.delete{
+  background-color: rgb(245, 125, 125);
+  border: transparent;
+}
+
+.delete:hover{
+  transform: scale(1.1);
+  background-color: rgb(240, 78, 78);
+}
+
+.delete:active{
+  transform: scale(0.9);
+  background-color: rgb(190, 9, 9);
+}
+
+.edit{
+  background-color: rgb(125, 189, 245);
+  border: transparent;
+}
+
+.edit:hover{
+  transform: scale(1.1);
+  background-color: rgb(77, 158, 230);
+}
+
+.edit:active{
+  transform: scale(0.9);
+  background-color: rgb(30, 128, 214);
+}
+
+.title{
+  font-size: 1.8rem;
+  border-radius: 20px;
+  border: 1px solid black;
+  padding: 10px;
+}
+
+
+.mark{
+  margin-left: 20px;
+  transform: scale(2.5);
+}

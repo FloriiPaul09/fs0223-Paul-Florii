@@ -1,6 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, } from '@angular/core';
 import { Todo } from 'src/app/interfaces/todo';
 import { TodoService } from 'src/app/todo.service';
+
 
 @Component({
   selector: 'app-completed',
@@ -10,6 +11,10 @@ import { TodoService } from 'src/app/todo.service';
 export class CompletedComponent implements OnInit {
   tasks: Todo[] = [];
   loading: boolean = true;
+  form:boolean = false;
+
+
+
 
   constructor(private todoSrvc:TodoService){}
 
@@ -33,9 +38,17 @@ export class CompletedComponent implements OnInit {
     }
 
     modifyTask(event:Event, todo:Todo){
+      this.form = !this.form;
       event.preventDefault();
       this.todoSrvc.updateTask(todo).then(response =>{
         this.getList();
       })
     }
-}
+
+    newTask(event:Event, todo:Todo){
+      event.preventDefault();
+      this.todoSrvc.addNewTask(todo).then(response =>{
+        this.getList()})
+      }
+    }
+

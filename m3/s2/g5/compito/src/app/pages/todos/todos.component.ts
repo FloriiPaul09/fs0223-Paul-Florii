@@ -10,6 +10,7 @@ import { TodoService } from 'src/app/todo.service';
 export class TodosComponent implements OnInit {
   tasks: Todo[] = [];
   loading: boolean = true;
+  form:boolean = false;
 
   constructor(private todoSrvc:TodoService){}
 
@@ -33,6 +34,7 @@ export class TodosComponent implements OnInit {
     }
 
     modifyTask(event:Event, todo:Todo){
+      this.form = !this.form;
       event.preventDefault();
       this.todoSrvc.updateTask(todo).then(response =>{
         this.getList();
