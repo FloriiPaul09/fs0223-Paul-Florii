@@ -10,14 +10,14 @@ export class ChildComponent {
   @ViewChild('f',{static: true}) form!: NgForm;
 
 
-
-
-
-
-
-
   submit(form:NgForm){
     console.log(form);
     console.log(form.form.value);
+  }
+
+  ngOnInit(){
+    this.form.statusChanges?.subscribe(status => {
+      console.log(status);
+    })
   }
 }

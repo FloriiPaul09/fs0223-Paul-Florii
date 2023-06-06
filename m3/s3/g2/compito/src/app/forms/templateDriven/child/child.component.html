@@ -23,6 +23,14 @@
           <input type="text" ngModel #enemy="ngModel" class="form-control text-center" placeholder="Superhero Enemy" required>
           <p *ngIf="enemy.invalid && enemy.touched" class="bg-danger rounded text-light text-center m-1">This field is required! You must add an enemy</p>
         </div>
+        <div class="col-12 m-1 mt-4">
+          <input type="text" ngModel #planet="ngModel" class="form-control text-center" placeholder="Superhero Home Planet" required>
+          <p *ngIf="planet.invalid && planet.touched" class="bg-danger rounded text-light text-center m-1">This field is required! You must add the superheroes planet</p>
+        </div>
+        <div class="col-12 m-1 mt-4">
+          <input type="text" ngModel #weakness="ngModel" class="form-control text-center" placeholder="Superhero Weaknesses" required>
+          <p *ngIf="weakness.invalid && weakness.touched" class="bg-danger rounded text-light text-center m-1">This field is required! You must add an enemy</p>
+        </div>
       </div>
       <button [disabled]="f.invalid" class="btn bg-success fw-bold text-light my-3 p-2">Submit</button>
     </form>

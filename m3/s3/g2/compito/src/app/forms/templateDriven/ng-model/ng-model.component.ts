@@ -6,10 +6,13 @@ import { Component } from '@angular/core';
   styleUrls: ['./ng-model.component.scss']
 })
 export class NgModelComponent {
-  name:string= '';
-  alterEgo:string= '';
-  power:string= '';
-  enemy:string= '';
-  planet:string= '';
-  weakness:string= '';
+ superhero:{ name:string, alterEgo:string, power:string, enemy:string, planet:string, weakness:string} = {
+  name: '',
+  alterEgo: '',
+  power: '',
+  enemy: '',
+  planet: '',
+  weakness: ''
+ }
+
 }
