@@ -7,23 +7,25 @@
   <div class="col-8">
     <form (ngSubmit)="submit(f)" #f="ngForm">
       <div class="row">
-        <div class="form group col-12 p-1">
+        <div class="form group col-12 m-1">
           <input type="text" ngModel #name="ngModel" class="form-control text-center" placeholder="Superhero Name" required>
-          <p *ngIf="name.invalid && name.touched">You must add a name!</p>
+          <p *ngIf="name.invalid && name.touched" class="bg-danger rounded text-light text-center m-1">This field is required!</p>
         </div>
-        <div class="col-4 p-1">
+        <div class="col-12 m-1 mt-4">
           <input type="text" ngModel #alterEgo="ngModel" class="form-control text-center" placeholder="Superhero Alter Ego" required>
-          <p *ngIf="alterEgo.invalid && alterEgo.touched">You must add an alter ego</p>
+          <p *ngIf="alterEgo.invalid && alterEgo.touched" class="bg-danger rounded text-light text-center m-1">This field is required! You must add an alter ego</p>
         </div>
-        <div class="col-8 p-1">
-          <input type="text" ngModel #alterEgo="ngModel" class="form-control text-center" placeholder="Superhero Alter Ego" required>
-          <p *ngIf="alterEgo.invalid && alterEgo.touched">You must add an alter ego</p>
+        <div class="col-12 m-1 mt-4">
+          <input type="text" ngModel #power="ngModel" class="form-control text-center" placeholder="Superhero Power" required>
+          <p *ngIf="power.invalid && power.touched" class="bg-danger rounded text-light text-center m-1">This field is required! You must add an alter ego</p>
+        </div>
+        <div class="col-12 m-1 mt-4">
+          <input type="text" ngModel #enemy="ngModel" class="form-control text-center" placeholder="Superhero Enemy" required>
+          <p *ngIf="enemy.invalid && enemy.touched" class="bg-danger rounded text-light text-center m-1">This field is required! You must add an enemy</p>
         </div>
       </div>
-
+      <button [disabled]="f.invalid" class="btn bg-success fw-bold text-light my-3 p-2">Submit</button>
     </form>
   </div>
-  <div class="col-2">
 
-  </div>
 </div>
