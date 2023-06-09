@@ -11,6 +11,14 @@ export class LogInComponent {
 
   constructor(private authSrvc : AuthService) { }
 
+  data:ILogIn = {
+    email : '',
+    password : ''
+  }
 
-
+  login(){
+    this.authSrvc.login(this.data).subscribe(accessData => {
+      alert(`Login successful, welcome back ${accessData.user.name}`)
+    })
+  }
 }
