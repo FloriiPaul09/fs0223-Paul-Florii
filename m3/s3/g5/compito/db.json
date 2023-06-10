@@ -1,5 +1,18 @@
 {
   "users": [
-
+    {
+      "email": "pippopalla@traballa.it",
+      "password": "$2a$10$5yJ31KmL7HNJ2js9.3w2C.Q2X4FM2M2xUVSRfTsoJENvjBoHbw6sq",
+      "name": "pippo",
+      "surname": "palla",
+      "id": 1
+    },
+    {
+      "email": "ciao@ciao.it",
+      "password": "$2a$10$YnhBsNEBb2Y04OrkSH5BPOPqds9KyppIvkz1ezhcPBMII4ft1yVa6",
+      "name": "ciao",
+      "surname": "ciao",
+      "id": 2
+    }
   ]
 }

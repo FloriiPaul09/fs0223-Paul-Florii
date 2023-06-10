@@ -1,1 +1,30 @@
-<p>auth works!</p>
+<div class="mt-4 row text-center">
+  <div class="col-2"></div>
+  <div class="col-8 ">
+  <h1>Welcome to PlatformName</h1>
+  <p class="fs-3">In order to proceed please <span class="text-success fw-bold">login</span> or <span class="text-primary fw-bold">signup</span> if you are new :)</p>
+  <div class="row ">
+    <div class="col-4 text-end mt-4">
+      <button class="btn btn-success fw-bold px-4" [routerLink]="['/auth', 'login']">Login</button>
+  </div>
+  <div class="col-4 mt-4"></div>
+    <div class="col-4 text-start mt-4">
+      <button class="btn btn-primary fw-bold px-4" [routerLink]="['/auth', 'signup']">Signup</button>
+  </div>
+  </div>
+
+  </div>
+  <div class="col-2"></div>
+</div>
+
+<div class="mt-5 footer text-light fixed-bottom">
+  <div class="row bg-primary">
+    <div class="col-2"></div>
+    <div class="col-8 text-center">
+      <p>Version: Beta test</p>
+    </div>
+    <div class="col-2"></div>
+  </div>
+</div>
+
+

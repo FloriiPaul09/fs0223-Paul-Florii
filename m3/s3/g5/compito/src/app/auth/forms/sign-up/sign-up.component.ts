@@ -9,19 +9,23 @@ import { AuthService } from '../../auth.service';
 })
 export class SignUpComponent {
 
-  constructor(private authSrvc : AuthService){  }
+  constructor(
+    private authSvc: AuthService
+  ){
 
-
-  data:ISignUp = {
-    name : '',
-    surname : '',
-    email : '',
-    password : ''
   }
 
+  data:ISignUp = {
+    email: '',
+    password: '',
+    name: '',
+    surname: ''
+  };
+
   register(){
-    this.authSrvc.signUp(this.data).subscribe(accessData => {
-      alert(accessData.user.name);
+    this.authSvc.signUp(this.data)
+    .subscribe(accessData => {
+      alert(accessData.user.name)
     })
   }
 }

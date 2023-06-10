@@ -2,7 +2,7 @@ import { IData } from './interfaces/i-data';
 import { Injectable } from '@angular/core';
 import { JwtHelperService } from '@auth0/angular-jwt';
 import { environment } from 'src/environments/environment.development';
-import { BehaviorSubject, map, tap } from 'rxjs';
+import { BehaviorSubject, catchError, map, tap, throwError } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
 import { Router } from '@angular/router';
 import { ILogIn } from './interfaces/i-log-in';
@@ -50,8 +50,8 @@ export class AuthService {
    }
 
    signUp(data:ISignUp){
-    return this.http.post<IData>(this.urlAPI + '/signup', data);
-   }
+    return this.http.post<IData>(this.urlAPI + '/register', data)
+  }
 
    logout(){
     this.authSub.next(null);
@@ -61,4 +61,24 @@ export class AuthService {
       clearTimeout(this.authLogoutTimer);
     }
    }
+
+  error(err : any){
+    switch (err.error) {
+      case "Email and Password are required":
+          return throwError('Email e password obbligatorie');
+          break;
+      case "Email already exists":
+          return throwError('Utente esistente');
+          break;
+      case 'Email format is invalid':
+          return throwError('Email scritta male');
+          break;
+      case 'Cannot find user':
+          return throwError('utente inesistente');
+          break;
+          default:
+      return throwError('Errore');
+          break;
+  }
+}
 }

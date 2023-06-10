@@ -1,10 +1,48 @@
-<main>
+<div class="row mt-4 text-center">
+
+  <div class="col-2"></div>
+  <div class="col-8 ">
+
     <h1>PlatformName Log In</h1>
-  <form>
-    <input type="email" placeholder="email" name="email" [(ngModel)]="data.email">
-    <input type="password" placeholder="password" name="password" [(ngModel)]="data.password">
-    <button (click)="login()">Login</button>
-  </form>
-</main>
+
+    <div class="row mt-4">
+      <div class="col-4"></div>
+      <div class="col-4">
+
+        <form class="bg-light p-4 border rounded">
+          <div class="form-group">
+            <input class="form-control mt-2" type="email" placeholder="Email" name="email" [(ngModel)]="data.email">
+          </div>
+          <div class="formgroup">
+            <input class="form-control mt-2" type="password" placeholder="Password" name="password" [(ngModel)]="data.password">
+          </div>
+
+
+          <button class="btn btn-success mt-2 px-4 fw-bold" (click)="login()">Login</button>
+        </form>
+
+
+      </div>
+      <div class="col-4"></div>
+
+
+    </div>
+
+
+
+
+
+
+  </div>
+  <div class="col-2"></div>
+
+
+
+
+
+
+
+
+</div>
 
 
