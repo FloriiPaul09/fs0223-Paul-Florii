@@ -1,1 +1,53 @@
-<p>board works!</p>
+<div class="row mt-4 text-center">
+
+<div class="col-2"></div>
+
+<div class="col-8">
+
+  <h1>PlatformName</h1>
+
+  <div class="row mt-4">
+    <div class="col-12">
+      <form class="bg-light p-4 border rounded">
+        <div class="form-group">
+          <input class="form-control mt-2" type="text" name="title" placeholder="Add a title to the new article" [(ngModel)]="newArticle.title">
+        </div>
+        <div class="form-group">
+          <input class="form-control mt-2" type="text" name="content" placeholder="Add some content to the new article" [(ngModel)]="newArticle.content">
+        </div>
+        <button class="btn btn-success mt-2 px-4 fw-bold" (click)="articleCreation()">Add new article!</button>
+      </form>
+    </div>
+  </div>
+
+  <div class="row mt-4">
+    <div class="col-12">
+      <table class="table bg-light p-2">
+        <tr *ngFor="let article of articles">
+          <td>{{article.title}}</td>
+          <td>{{article.content}}</td>
+          <td>
+            <button class="btn btn-warning mt-2 px-4 fw-bold text-warning" [routerLink]="['/board', 'modify', article.id]">Edit article</button>
+          </td>
+          <td>
+            <button class="btn btn-danger mt-2 px-4 fw-bold text-danger" (click)="articleDelete(article.id)">Delete article</button>
+          </td>
+
+        </tr>
+      </table>
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+</div>
+
+<div class="col-2"></div>
+
+
+</div>

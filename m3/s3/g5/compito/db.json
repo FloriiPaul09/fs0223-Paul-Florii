@@ -14,5 +14,12 @@
       "surname": "ciao",
       "id": 2
     }
+  ],
+  "article": [
+    {
+      "title": "Hello",
+      "content": "First article",
+      "id": 1
+    }
   ]
 }

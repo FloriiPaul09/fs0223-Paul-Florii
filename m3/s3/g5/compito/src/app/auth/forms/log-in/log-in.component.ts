@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { ILogIn } from '../../interfaces/i-log-in';
 import { AuthService } from '../../auth.service';
+import { Router } from '@angular/router';
+
 
 @Component({
   selector: 'app-log-in',
@@ -9,7 +11,7 @@ import { AuthService } from '../../auth.service';
 })
 export class LogInComponent {
 
-  constructor(private authSrvc : AuthService) { }
+  constructor(private authSrvc : AuthService, private router:Router) { }
 
   data:ILogIn = {
     email : '',
@@ -19,6 +21,7 @@ export class LogInComponent {
   login(){
     this.authSrvc.login(this.data).subscribe(accessData => {
       alert(`Login successful, welcome back ${accessData.user.name}`)
+      this.router.navigate(['/board'])
     })
   }
 }

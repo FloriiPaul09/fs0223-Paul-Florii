@@ -3,15 +3,19 @@ import { CommonModule } from '@angular/common';
 
 import { BoardRoutingModule } from './board-routing.module';
 import { BoardComponent } from './board.component';
+import { ArticleEditComponent } from './article-edit/article-edit.component';
+import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
   declarations: [
-    BoardComponent
+    BoardComponent,
+    ArticleEditComponent
   ],
   imports: [
     CommonModule,
-    BoardRoutingModule
+    BoardRoutingModule,
+    FormsModule
   ]
 })
 export class BoardModule { }
